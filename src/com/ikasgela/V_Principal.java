@@ -2,8 +2,6 @@ package com.ikasgela;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,63 +22,51 @@ public class V_Principal {
     private static int id_Pedido = 0;
 
     public V_Principal() {
-        newProducto_Button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        newProducto_Button.addActionListener(e -> {
 
-                JFrame frame = new JFrame("Nuevo Producto");
-                frame.setContentPane(new V_NProducto().panel);
-                frame.pack();
-                frame.setVisible(true);
-                Toolkit toolkit = Toolkit.getDefaultToolkit();
-                Dimension screenSize = toolkit.getScreenSize();
-                int x = (screenSize.width - frame.getWidth()) / 2;
-                int y = (screenSize.height - frame.getHeight()) / 2;
-                frame.setLocation(x, y);
+            JFrame frame = new JFrame("Nuevo Producto");
+            frame.setContentPane(new V_NProducto().panel);
+            frame.pack();
+            frame.setVisible(true);
+            Toolkit toolkit = Toolkit.getDefaultToolkit();
+            Dimension screenSize = toolkit.getScreenSize();
+            int x = (screenSize.width - frame.getWidth()) / 2;
+            int y = (screenSize.height - frame.getHeight()) / 2;
+            frame.setLocation(x, y);
 
-            }
         });
-        newClient_Button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame("Nuevo Cliente");
-                frame.setContentPane(new V_NCliente().panel);
-                frame.pack();
-                frame.setVisible(true);
-                Toolkit toolkit = Toolkit.getDefaultToolkit();
-                Dimension screenSize = toolkit.getScreenSize();
-                int x = (screenSize.width - frame.getWidth()) / 2;
-                int y = (screenSize.height - frame.getHeight()) / 2;
-                frame.setLocation(x, y);
-            }
+        newClient_Button.addActionListener(e -> {
+            JFrame frame = new JFrame("Nuevo Cliente");
+            frame.setContentPane(new V_NCliente().panel);
+            frame.pack();
+            frame.setVisible(true);
+            Toolkit toolkit = Toolkit.getDefaultToolkit();
+            Dimension screenSize = toolkit.getScreenSize();
+            int x = (screenSize.width - frame.getWidth()) / 2;
+            int y = (screenSize.height - frame.getHeight()) / 2;
+            frame.setLocation(x, y);
         });
-        newPedido_Button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame("Nuevo Pedido");
-                frame.setContentPane(new V_NPedido().panel);
-                frame.pack();
-                frame.setVisible(true);
-                Toolkit toolkit = Toolkit.getDefaultToolkit();
-                Dimension screenSize = toolkit.getScreenSize();
-                int x = (screenSize.width - frame.getWidth()) / 2;
-                int y = (screenSize.height - frame.getHeight()) / 2;
-                frame.setLocation(x, y);
-            }
+        newPedido_Button.addActionListener(e -> {
+            JFrame frame = new JFrame("Nuevo Pedido");
+            frame.setContentPane(new V_NPedido().panel);
+            frame.pack();
+            frame.setVisible(true);
+            Toolkit toolkit = Toolkit.getDefaultToolkit();
+            Dimension screenSize = toolkit.getScreenSize();
+            int x = (screenSize.width - frame.getWidth()) / 2;
+            int y = (screenSize.height - frame.getHeight()) / 2;
+            frame.setLocation(x, y);
         });
-        pedidosList_Button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame("Ver Pedidos");
-                frame.setContentPane(new V_PedidoTable().panel);
-                frame.pack();
-                frame.setVisible(true);
-                Toolkit toolkit = Toolkit.getDefaultToolkit();
-                Dimension screenSize = toolkit.getScreenSize();
-                int x = (screenSize.width - frame.getWidth()) / 2;
-                int y = (screenSize.height - frame.getHeight()) / 2;
-                frame.setLocation(x, y);
-            }
+        pedidosList_Button.addActionListener(e -> {
+            JFrame frame = new JFrame("Ver Pedidos");
+            frame.setContentPane(new V_PedidoTable().panel);
+            frame.pack();
+            frame.setVisible(true);
+            Toolkit toolkit = Toolkit.getDefaultToolkit();
+            Dimension screenSize = toolkit.getScreenSize();
+            int x = (screenSize.width - frame.getWidth()) / 2;
+            int y = (screenSize.height - frame.getHeight()) / 2;
+            frame.setLocation(x, y);
         });
     }
 
